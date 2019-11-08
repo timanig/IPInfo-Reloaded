@@ -16,7 +16,7 @@ namespace IPInfoReloaded
 
             //create client
             var client = new HttpClient();
-            // get
+            // 
             var json = client.GetStringAsync("https://ipinfo.io/json").Result;
             var result = JsonConvert.DeserializeObject<IPInfoModel>(json);
             ZipCode = result.postal;
